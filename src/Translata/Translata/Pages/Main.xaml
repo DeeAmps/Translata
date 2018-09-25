@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Translata.Pages.Main"
+             BackgroundImage="wall.jpeg">
+    <ContentPage.Content>
+        <StackLayout Padding="0 ,150, 0, 0">
+            <Label Text="Translata" HorizontalOptions="Center" 
+                   FontSize="60" TextColor="Black"
+                   FontAttributes="Bold">
+            </Label>
+            <Label Text="Breaking Language Barriers" HorizontalOptions="Center" 
+                   TextColor="Black"
+                   FontAttributes="Bold">
+            </Label>
+            <Button
+                Text ="Sign Up" 
+                VerticalOptions="EndAndExpand" 
+                TextColor="Black" 
+                Clicked="SignUp"
+                BackgroundColor="White" 
+                FontAttributes="Bold" 
+                FontSize="25" 
+                Margin="20, 0, 20, -90"></Button>
+            <StackLayout 
+                Margin="5, 25, 0, -50"
+                Orientation="Horizontal" 
+                HorizontalOptions="Center" 
+                VerticalOptions="CenterAndExpand">
+                <Label  
+                   TextColor="White" FontSize="16" Text="Have an account already?">
+                </Label>
+                <Label 
+                   FontAttributes="Bold"
+                   TextColor="Blue" 
+                   FontSize="15"
+                   Text="Log In">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Login"/>
+                    </Label.GestureRecognizers>
+                </Label>
+            </StackLayout>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

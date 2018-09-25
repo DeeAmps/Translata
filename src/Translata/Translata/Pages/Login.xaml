@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+             x:Class="Translata.Pages.Login"
+             Title="Log In">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text ="Close"      
+                Priority="0" Order="Primary" Clicked="GoToMain"/>
+        <ToolbarItem Text ="SignUp"  
+              Priority="1"  Clicked="GoToSignUp" Order="Primary" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout Margin="20, 40, 20, 10" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <controls:CircleImage VerticalOptions="Center" HorizontalOptions="Center" Source="loginicon.png" Aspect="AspectFill" WidthRequest="120" HeightRequest="120"></controls:CircleImage>
+            <Label Text="Email" FontSize="12" FontAttributes="Bold"></Label>
+            <Entry Placeholder="Enter your Email" x:Name="LoginEmail" Keyboard="Email"></Entry>
+            <Label Text="Password" FontSize="12" FontAttributes="Bold"></Label>
+            <Entry Margin="0 ,0, 0 , 0" Placeholder="Enter your Password"  IsPassword="True" x:Name="LoginPassword"></Entry>
+            <Button Margin="0 , 25,  0, 0" Clicked="UserLogin" TextColor="White" FontSize="20" FontAttributes="Bold" Text="Login" BackgroundColor="#2196F3"></Button>
+            <ActivityIndicator Color="Blue" VerticalOptions="Center" HorizontalOptions="Center" x:Name="activityIndicator" IsRunning="{Binding IsBusy}"></ActivityIndicator>
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

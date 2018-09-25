@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Translata.Pages.SignUp"
+             Title="Sign Up">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text ="Close"  
+                Priority="0" Order="Primary" Clicked="ShowExitDialog"/>
+        <ToolbarItem Text ="Next"  
+              Priority="1" Order="Primary" Clicked="NextSignUp"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout Margin="20, 20, 20, 0" Spacing="20">
+            <StackLayout Orientation="Horizontal" >
+                <Entry x:Name="FirstName" HorizontalOptions="Start" WidthRequest = "150" Placeholder="First Name"></Entry>
+                <Entry x:Name="LastName" HorizontalOptions="End" WidthRequest = "150" Placeholder="Last Name"></Entry>
+            </StackLayout>
+            <Entry x:Name="Email" Placeholder="Email" Keyboard="Email"></Entry>
+            <Entry x:Name="Password" Placeholder="Password (6+ characters)" IsPassword="True"></Entry>
+            <Entry x:Name="ConfirmPassword" Placeholder="Confirm Password" IsPassword="True"></Entry>
+            <Label Text="Date Of Birth"></Label>
+            <DatePicker x:Name="DateOfBirth"></DatePicker>
+            <!--<Label Text="Country"></Label>-->
+            <!--<Picker VerticalOptions="Center" x:Name="Country" Title="Select your country">
+            </Picker>-->
+            <Label FontSize="15" HorizontalOptions="Center" Text="Already have account? Sign In" TextColor="Blue">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Login"/>
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
